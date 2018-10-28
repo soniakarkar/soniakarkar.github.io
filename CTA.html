@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title> Activity on CTA</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.dropotron.min.js"></script>
+	<script src="js/jquery.scrollgress.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.slidertron.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/ninja-slider.js" type="text/javascript"></script>
+	<script src="js/ninjaVideoPlugin.js"></script>
+	<link href="css/ninja-slider.css" rel="stylesheet" type="text/css" />
+	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript>
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header id="header" class="skel-layers-fixed">
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#Projects" class="icon fa-angle-down">Projects</a>
+					<ul>
+						<li><a href="http://desi.lbl.gov">DESI</a></li>
+						<li><a href="CTA.html">CTA</a></li>
+						<li><a href="http://imxgam.in2p3.fr"> ImXGam </a></li>
+						<li><a href="http://www.virgo-gw.eu">VIRGO</a></li>
+						<li><a href="http://antares.in2p3.fr">ANTARES</a></li>
+							<!-- <li>
+							<a href="">Submenu</a>
+							<ul>
+								<li><a href="#">Option 1</a></li>
+								<li><a href="#">Option 2</a></li>
+								<li><a href="#">Option 3</a></li>
+								<li><a href="#">Option 4</a></li>
+							</ul>
+						</li> -->
+					</ul>
+				</li>
+				<li>
+					<a href="" class="icon fa-angle-down">Resume</a>
+					<ul>
+						<li><a href="SoniaKarkar2018Web.pdf"/> Colorfull </a></li>
+						<li><a href="SoniaKarkarBWResumeWeb.pdf"/> Printer Friendly </a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="Multimedia.html" class="icon fa-angle-down">Multimedia</a>
+					<ul>
+						<li><a href="https://www.flickr.com/photos/cta_observatory/"/> CTA flickr </a></li>
+						<li><a href="https://www.desi.lbl.gov/photos/"/> DESI gallery</a></li>
+					</ul>
+				</li>
+				<!-- <li><a href="elements.html">Elements</a></li> -->
+			</ul>
+		</nav>
+	</header>
+	<!-- Main -->
+	<section id="main" class="wrapper style1">
+		<header class="major">
+			<h2>Activity on CTA</h2>
+			<p>Readout electronics for NectarCam</p>
+		</header>
+		<div class="container">
+			<div class="row 150%">
+				<div class="8u 12u$(2) important(2)">
+					<!-- Content -->
+					<section id="content">
+						<h2>From prototype to production <br>of the NectarCam Front End Boards</h2>
+						<h3>The first prototypes</h3>
+						<h4>Debug and iterate</h4>
+						<a  class="image fit"><img src="images/cta/FEB2v3.jpg" alt=""></a>
+						<p>A couple of iterations was needed to reach the first fully functionnal Front End Board. </p>
+							<ul>
+							<li>My role was to debug each functionality, interacting with the electronics designers and the prototype software (C library + debugging GUI) designer.  </li>
+							<li>Each component (electronics and software) is tested separately by its designer but a lot of the testing and debugging happens only at the integration time.</li>
+							<li> Progressively, the manual debug operations are scripted in Python to run more and more in-depth tests.</li>
+							<!-- <li> </li> -->
+							</ul>
+						<h3>Ready for production</h3>
+						<!-- <a href="#" class="image fit"><img src="images/slide02.jpg" alt=""></a> -->
+						<h4>The test bench initially set up for debug and caracterisation becomes the automated production acceptance test</h4>
+						<ul>
+							<li>The scripting is done entirely in Python. </li>
+							<li>The control-command of the testbench instruments (Power Supply, Pulse generator, Attenuator) is done using <a href="https://docs.python.org/2/library/socket.html"> sockets</a> and <a href="https://en.wikipedia.org/wiki/Standard_Commands_for_Programmable_Instruments">SCPI
+									commands</a> </li>
+							<li>For the data acquisition, the FebTest software is calling an executable written in C, using the libNectarCam which is the C library developped in the lab for the communication with the Front End Board.</li>
+							<li>For the control-command of the Front End Board,
+								the FebTest software is using a  <a href="http://irfu.cea.fr/Pisp/patrick.sizun/cta/doc/NectarCamPyUaf/html/index.html">  Opcua Client</a>
+								based of <a href="http://uaf.github.io/uaf/doc/pyuaf/"> PyUAF</a>,
+								interacting with the qNectarCamOpcUaServer, both
+								developped in the by the NectarCam collaboration for the
+								slow control of the Front End Board and other elements of the camera.</li>
+							<li>The TestAuto GUI is basic but robust and made with <a href="http://pyqt.sourceforge.net/Docs/PyQt4/index.html"> PyQt</a>, including threads to keep the GUI responsive.</li>
+							<li>The FebTest software <a href="http://supernovae.in2p3.fr/~karkar/DocFebTest"> documentation </a> is automatically generated via  <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> after each commit on CTA's <a href="https://subversion.apache.org/">SVN</a> server using a <a href="https://www.jetbrains.com/teamcity"> TeamCity</a> server
+								for continous integration.</li>
+							<!-- <li> </li> -->
+						</ul>
+
+						<!--start ninja-slider-->
+						<div id="ninja-slider">
+							<div class="slider-inner">
+								<ul>
+									<li>
+										<div class="video">
+											<video controls width="100%">
+												<source src="images/cta/ProdTestAuto_FrontEndBoard.mp4" type="video/mp4" />
+											</video>
+										</div>
+										<!-- <a><img  class="ns-img" src="images/cta/ProdTestAuto_FrontEndBoard.mp4" /></a> -->
+										<!-- <div class="caption cap1">Production acceptance test <br>automated setup <br> in the lab</div> -->
+										<!-- <div class="caption">Credit: F.Toussenel</div> -->
+									</li>
+									<li>
+										<a><img class="ns-img" src="images/cta/testAutoOnSite.jpg" /></a>
+										<div class="caption cap1">Production acceptance test <br>automated setup <br> on site</div>
+										<div class="caption">Credit: F.Toussenel</div>
+									</li>
+									<li><a><img class="ns-img" src="images/cta/firstOK.jpg" /></a>
+										<div class="caption cap1">First pre-serie board passed <br> the production acceptance <br> automated test on site</div>
+										<div class="caption">Credit: F.Toussenel</div>
+									</li>
+									<li>
+										<!-- <a href="/"><img class="ns-img" src="images/cta/doubleTestAutoComputers.jpg" style="cursor:pointer;" /></a> -->
+										<a><img class="ns-img" src="images/cta/doubleTestAutoComputers.jpg" /></a>
+										<!-- <div class="caption cap1">Scaling up</div> -->
+										<div class="caption cap1">Duplication of the <br>production acceptance <br> automated test setup</div>
+										<div class="caption">Credit: F.Toussenel</div>
+									</li>
+									<li>
+										<a><img class="ns-img" src="images/cta/doubleTestAutoHW.jpg" /></a>
+										<!-- <div class="caption cap1">Scaling up</div> -->
+										<div class="caption cap1">Duplication of the <br> production acceptance <br> automated test setup</div>
+										<div class="caption">Credit: F.Toussenel</div>
+									</li>
+									<li>
+										<a><img class="ns-img" src="images/cta/doubleTestAutoOnSite.jpg" /></a>
+										<div class="caption cap1">Double setup on <br> production site</div>
+										<!-- <div class="caption cap2">Scaling up for production</div> -->
+										<div class="caption">Credit: F.Toussenel</div>
+									</li>
+								</ul>
+								<div class="fs-icon" title="Expand/Close"></div>
+							</div>
+						</div>
+						<!--end ninja-slider -->
+						<!-- <ul>
+							<li>Faucibus orci lobortis ac adipiscing integer.</li>
+							<li>Col accumsan arcu mi aliquet placerat.</li>
+						</ul> -->
+					</section>
+				</div>
+				<div class="4u 12u$(2)">
+					<!-- Sidebar -->
+					<section id="sidebar">
+						<h2>Context</h2>
+						<section>
+							<h3>NectarCam : a camera for CTA MST</h3>
+							<!-- <a href="" </a> -->
+							<a href="images/cta/NectarCam.jpg" class="image fit"><img src="images/cta/NectarCam.jpg" alt="NectarCam"> </a>
+							<p>NectarCam is a camera for CTA Medium Size Telescope. <br>It is being built by an international collaboration.</p>
+							<footer>
+								<ul class="actions">
+									<li><a href="https://arxiv.org/pdf/1508.06555.pdf" class="button small alt">Learn More on NectarCam</a></li>
+								</ul>
+							</footer>
+						</section>
+						<hr>
+						<section>
+							<h3>CTA : Cherenkov Telescope Array</h3>
+							<a href="https://www.flickr.com/photos/cta_observatory/32835056736/" class="image fit"><img src="images/CTA.jpg" alt="NectarCam"></a>
+							<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a> -->
+							<p>CTA is an Array of Cherenkov Telescopes for ground based Gamma Ray Astronomy. It will be deployed on two sites, one in each hemisphere, and conssits in an array of telescopes of three sizes : Small (SST), Medium (MST) and Large (LST).
+							<br>It is being built by an international consortium, gathering the gamma ray astronomy community worldwide.</p>
+							<footer>
+								<ul class="actions">
+									<li><a href="https://www.cta-observatory.org/" class="button small alt">Learn More on CTA</a></li>
+								</ul>
+							</footer>
+						</section>
+						<hr>
+						<section>
+							<h3>Gamma Ray Astronomy</h3>
+							<a href="https://asd.gsfc.nasa.gov/archive/mwmw" class="image fit"><img src="images/cta/mwmw_8x10.jpg" alt="The multiwavelength Milkky Way"></a>
+							<p>
+								Gamma Ray Astronomy consists in mapping the sky using gamma rays emmited by celestial bodies.
+								Mapping the sky using various wavelength is an essential part of modern astronomy and often described as <a href="http://ecuip.lib.uchicago.edu/multiwavelength-astronomy/gamma-ray/science/04.html"> Multiwavelength astronomy</a>
+							</p>
+							<footer>
+								<div class="row 150%">
+								<ul class="actions">
+									<li>
+										<a href="https://imagine.gsfc.nasa.gov/science/toolbox/gamma_ray_astronomy1.html" class="button small alt">Space Born Gamma Ray Astro</a>
+									</li>
+									<li>
+										<a href="https://www.dur.ac.uk/cfai/vhegammaraygroup/physics/groundbased/" class="button small alt">Ground Based Gamma Ray Astro </a>
+									</li>
+									<!-- <li><a href="#" class="button small alt">Learn More</a></li> -->
+								</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<!-- <ul class="icons">
+			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+			<li><a href="#" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
+		</ul>
+		<ul class="menu">
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul> -->
+		<span class="copyright">
+			2018 Sonia Karkar &copy; Copyright. All rights reserved. Design by <a href="http://www.html5webtemplates.co.uk">Responsive Web Templates</a>
+		</span>
+	</footer>
+
+</body>
+
+</html>
