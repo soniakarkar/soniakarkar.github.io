@@ -7,6 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<!-- <link rel="import" href="allJS.html" > -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/jquery.scrollgress.min.js"></script>
@@ -15,6 +16,8 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/includehtml.js"></script>
+
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -24,214 +27,159 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="landing">
-
 		<!-- Header -->
-			<header id="header" class="alt skel-layers-fixed">
-				<!-- <h1><a href="index.html">HTML5 Website <span>by Html5webtemplates.co.uk</span></a></h1> -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li>
-							<a href="" class="icon fa-angle-down">Projects</a>
-							<ul>
-								<li><a href="http://desi.lbl.gov">DESI</a></li>
-								<li><a href="https://www.cta-observatory.org"/>CTA</a></li>
-								<li><a href="http://imxgam.in2p3.fr"> ImXGam </a></li>
-								<li><a href="http://www.virgo-gw.eu">VIRGO</a></li>
-								<li><a href="http://antares.in2p3.fr">ANTARES</a></li>
-									<!-- <li>
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Option 1</a></li>
-										<li><a href="#">Option 2</a></li>
-										<li><a href="#">Option 3</a></li>
-										<li><a href="#">Option 4</a></li>
-									</ul>
-								</li> -->
-							</ul>
-						</li>
-						<li>
-							<a href="" class="icon fa-angle-down">Resume</a>
-							<ul>
-								<li><a href="SoniaKarkar2018Web.pdf"/> Colorfull </a></li>
-								<li><a href="SoniaKarkarBWResumeWeb.pdf"/> Printer Friendly </a></li>
-							</ul>
-						</li>
-						<!-- <li><a href="elements.html">Elements</a></li> -->
-					</ul>
-				</nav>
-			</header>
-
+		<header id="header" class="alt skel-layers-fixed">
+		    <nav id="nav">
+		        <ul>
+		            <li><a href="index.html">Home</a></li>
+		            <li><a href="#Projects" class="icon fa-angle-down">Projects</a>
+		                <ul>
+		                    <li><a href="http://desi.lbl.gov">DESI</a></li>
+		                    <li><a href="CTA.html">CTA</a></li>
+		                    <li><a href="http://imxgam.in2p3.fr"> ImXGam </a></li>
+		                    <li><a href="http://www.virgo-gw.eu">VIRGO</a></li>
+		                    <li><a href="http://antares.in2p3.fr">ANTARES</a></li>
+		                        <!-- <li>
+		                        <a href="">Submenu</a>
+		                        <ul>
+		                            <li><a href="#">Option 1</a></li>
+		                            <li><a href="#">Option 2</a></li>
+		                            <li><a href="#">Option 3</a></li>
+		                            <li><a href="#">Option 4</a></li>
+		                        </ul>
+		                    </li> -->
+		                </ul>
+		            </li>
+		            <li>
+		                <a href="" class="icon fa-angle-down">Resume</a>
+		                <ul>
+		                    <li><a href="SoniaKarkar2018Web.pdf"/> Colorfull </a></li>
+		                    <li><a href="SoniaKarkarBWResumeWeb.pdf"/> Printer Friendly </a></li>
+		                </ul>
+		            </li>
+		            <li>
+		                <a href="Multimedia.html" class="icon fa-angle-down">Multimedia</a>
+		                <ul>
+		                    <li><a href="https://www.flickr.com/photos/cta_observatory/"/> CTA flickr </a></li>
+		                    <li><a href="https://www.desi.lbl.gov/photos/"/> DESI gallery</a></li>
+		                </ul>
+		            </li>
+		            <!-- <li><a href="elements.html">Elements</a></li> -->
+		        </ul>
+		    </nav>
+		</header>
 		<!-- Banner -->
-			<section id="banner">
+		<section id="banner">
 				<div class="inner">
 					<h2>Sonia Karkar</h2>
 					<p>Research engineer, PhD</p>
 					<ul class="actions">
-						<li><a href="#one" class="button big scrolly">Learn More</a></li>
+						<li><a href="#Intro" class="button big scrolly">Meet me</a></li>
 					</ul>
 				</div>
 			</section>
-
-		<!-- One -->
-			<section id="one" class="wrapper style1">
+		<!-- Intro -->
+		<section id="Intro" class="wrapper style1">
+			<div class="container">
+				<header class="major">
+					<h2>Instrumentation Research Engineer</h2>
+					<h3>What</h3>
+						<p>
+						I work on the development, integration, test, validation and calibration of complex scientific instruments. <br />
+						My work happens before an instrument is live and taking data, most of it even before the instrument is actually built.
+						</p>
+					<h3>With whom</h3>
+						<p>
+						Being involved from the hardware specification to the final data gives me the extraordinary opportunity to interact with scientists, engineers and technicians of various specialties : physics, astrophysics, biology, computing, electronics, mechanics.
+						</p>
+					<h3>Field</h3>
+						<p>
+						In the last 18 years, I've been working on big international astronomy projects, with a little detour in medical imaging.
+						<br /> Learn more in the <a href="#Projects" >Projects section</a>.
+						</p>
+					<h3>Where</h3>
+						<p>
+						These projects have taken me to various research laboratories: <br />
+					  at <a href="https://www.cppm.in2p3.fr">CPPM</a> in Marseilles, FR ; <br /> at <a href="https://lapp.in2p3.fr">LAPP</a> in Annecy, FR ; <br />at <a href="https://kipac.stanford.edu">KIPAC</a> in Stanford, CA ; <br />and currently at <a href="https://lpnhe.in2p3.fr">LPNHE</a > in Paris, FR.
+						</p>
+				</header>
+				<br />
+		</section>
+		<!-- Projects -->
+		<section id="Projects" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Instrumentation Research Engineer</h2>
-						<h3>What</h3>
-						<p>
-							I work on the development, integration, test, validation and calibration of complex scientific instruments. <br />
-							My work happens before an instrument is live and taking data, most of it even before the instrument is actually built. <br />
-							 <br />
-						<h3>With whom</h3>
-							Being involved from the hardware specification to the final data gives me the extraordinary opportunity to interact with scientists, engineers and technicians of various specialties : physics, astrophysics, biology, computing, electronics, mechanics
-						</p>
-						<h3>Field</h3>
-							<p>
-							In the last 18 years, I've been working on big international astronomy projects, with a little detour in medical imaging.
-							</p>
-						<h3>Where</h3>
-							<p>
-							These projects have taken me to various research laboratories: <br />
-						  at <a href="https://www.cppm.in2p3.fr">CPPM</a> in Marseilles, FR ; <br /> at <a href="https://lapp.in2p3.fr">LAPP</a> in Annecy, FR ; <br />at <a href="https://kipac.stanford.edu">KIPAC</a> in Stanford, CA ; <br />and currently at <a href="https://lpnhe.in2p3.fr">LPNHE</a > in Paris, FR.
-							</p>
+						<h2> Current projects</h2>
+						<p></p>
 					</header>
-					<br />
-					<!-- <div class="slider">
-						<span class="nav-previous"></span>
-						<div class="viewer" >
-							<div class="reel">
-							 <div class="slide" >
-									<img src="images/DESI.jpg" alt="A view of the Mayall Telescope (tallest telescope at right) at Kitt Peak National Observatory near Tucson, Arizona. (Credit: Marilyn Chung/Berkeley Lab)" />
-								 </div>
-								<div class="slide">
-									<img src="images/CTA.jpg" alt="CTA Northern Hemisphere Site Rendering; credit: Gabriel Pérez Diaz, IAC, SMM" />
-								</div>
-								<div class="slide">
-									<img src="images/IMXGAM.jpg" alt="IMXGAM" />
-								</div>
-								<div class="slide">
-									<img src="images/VIRGO.jpg" alt="VIRGO An artist's impression of gravitational waves generated by binary neutron stars.Credits: R. Hurt/Caltech-JPL"/>
-								</div>
-								<div class="slide">
-										<img src="images/ANTARES.jpg" alt="ANTARES" />
-									</div>
-							</div>
+					<div class="row">
+						<div class="4u 6u(2) 12u$(3)">
+							<article class="box post">
+								<a href="http://desi.lbl.gov" class="image fit"><img src="images/DESI.jpg" alt="A view of the Mayall Telescope (tallest telescope at right) at Kitt Peak National Observatory near Tucson, Arizona. (Credit: Marilyn Chung/Berkeley Lab)" /></a>
+								<h3>DESI</h3>
+								<p>Dark Energy Spectroscopic Instrument.</p>
+								<ul class="actions">
+									<li><a href="http://desi.lbl.gov" class="button">Learn More</a></li>
+								</ul>
+							</article>
 						</div>
-						<span class="nav-next"></span>
+						<div class="4u 6u(2) 12u$(3)">
+							<article class="box post">
+								<a href="https://www.flickr.com/photos/cta_observatory/32835056736/" class="image fit"><img src="images/CTA.jpg" alt="CTA Northern Hemisphere Site Rendering; credit: Gabriel Pérez Diaz, IAC, SMM" /></a>
+								<h3>CTA</h3>
+								<p>Cherenkov Telescope Array</p>
+								<ul class="actions">
+									<li><a href="CTA.html" class="button">Learn More</a></li>
+								</ul>
+							</article>
+						</div>
 					</div>
-					 <br /> <br />
 				</div>
-				 <br /> <br /> -->
-			</section>
-			<!-- Three -->
-				<section id="three" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2> Current projects</h2>
-							<p>
-							</p>
-						</header>
-						<div class="row">
-							<div class="4u 6u(2) 12u$(3)">
-								<article class="box post">
-									<a href="http://desi.lbl.gov" class="image fit"><img src="images/DESI.jpg" alt="A view of the Mayall Telescope (tallest telescope at right) at Kitt Peak National Observatory near Tucson, Arizona. (Credit: Marilyn Chung/Berkeley Lab)" /></a>
-									<h3>DESI</h3>
-									<p>Dark Energy Spectroscopic Instrument.</p>
-									<ul class="actions">
-										<li><a href="http://desi.lbl.gov" class="button">Learn More</a></li>
-									</ul>
-								</article>
-							</div>
-								<div class="4u 6u(2) 12u$(3)">
-								<article class="box post">
-									<a href="https://www.cta-observatory.org" class="image fit"><img src="images/CTA.jpg" alt="CTA Northern Hemisphere Site Rendering; credit: Gabriel Pérez Diaz, IAC, SMM" /></a>
-									<h3>CTA</h3>
-									<p>Cherenkov Telescope Array</p>
-									<ul class="actions">
-										<li><a href="https://www.cta-observatory.org" class="button">Learn More</a></li>
-									</ul>
-								</article>
-							</div>
+		</section>
+		<!-- FormerProjects -->
+		<section id="FormerProjects" class="wrapper style1">
+			<div class="container">
+				<header class="major">
+					<h2> Projects I used to work on</h2>
+					<p></p>
+				</header>
+					<div class="row">
+						<div class="4u 6u(2) 12u$(3)">
+							<article class="box post">
+								<a href="http://www.virgo-gw.eu" class="image fit"><img src="images/VIRGO.jpg" alt="VIRGO An artist's impression of gravitational waves generated by binary neutron stars.Credits: R. Hurt/Caltech-JPL"/></a>
+								<h3>VIRGO</h3>
+								<p></p>
+								<ul class="actions">
+									<li><a href="http://www.virgo-gw.eu" class="button">Learn More</a></li>
+								</ul>
+							</article>
+						</div>
+						<div class="4u 6u(2) 12u$(3)">
+							<article class="box post">
+								<a href="http://antares.in2p3.fr" class="image fit">	<img src="images/ANTARES.jpg" alt="ANTARES" /></a>
+								<h3>ANTARES</h3>
+								<p>Neutrino astronomy</p>
+								<ul class="actions">
+									<li><a href="http://antares.in2p3.fr" class="button">Learn More</a></li>
+								</ul>
+							</article>
+						</div>
+						<div class="4u 6u(2) 12u$(3)">
+							<article class="box post">
+								<a href="http://imxgam.in2p3.fr" class="image fit">	<img src="images/IMXGAM.jpg" alt="IMXGAM" /></a>
+								<h3>ImXGam</h3>
+								<p>Simultaneous PET-CT</p>
+								<ul class="actions">
+									<li><a href="http://imxgam.in2p3.fr" class="button">Learn More</a></li>
+								</ul>
+							</article>
 						</div>
 					</div>
-				</section>
-			</section>
-			<!-- <li><a href="http://desi.lbl.gov/">Cosmology : DESI</a></li>
-			<li><a href=https://www.cta-observatory.org/>Gamma ray astronomy: CTA</a></li>
-			<li><a href="http://imxgam.in2p3.fr/" ImXGam</a></li>
-			<li><a href="http://www.virgo-gw.eu/">Gravitationnal wave astronomy : VIRGO</a></li>
-			<li><a href="http://antares.in2p3.fr/">Neutrno astronomy : ANTARES</a></li> -->
-			<!-- four -->
-				<section id="four" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2> Projects I used to work on</h2>
-							<p>
-							<div class="row">
-								<div class="4u 6u(2) 12u$(3)">
-									<article class="box post">
-										<a href="http://www.virgo-gw.eu" class="image fit"><img src="images/VIRGO.jpg" alt="VIRGO An artist's impression of gravitational waves generated by binary neutron stars.Credits: R. Hurt/Caltech-JPL"/></a>
-										<h3>VIRGO</h3>
-										<p></p>
-										<ul class="actions">
-											<li><a href="http://www.virgo-gw.eu" class="button">Learn More</a></li>
-										</ul>
-									</article>
-								</div>
-								<div class="4u 6u(2) 12u$(3)">
-									<article class="box post">
-										<a href="http://antares.in2p3.fr" class="image fit">	<img src="images/ANTARES.jpg" alt="ANTARES" /></a>
-										<h3>ANTARES</h3>
-										<p>Neutrino astronomy</p>
-										<ul class="actions">
-											<li><a href="http://antares.in2p3.fr" class="button">Learn More</a></li>
-										</ul>
-									</article>
-								</div>
-								<div class="4u 6u(2) 12u$(3)">
-									<article class="box post">
-										<a href="http://imxgam.in2p3.fr" class="image fit">	<img src="images/IMXGAM.jpg" alt="IMXGAM" /></a>
-										<h3>ImXGam</h3>
-										<p>Simultaneous PET-CT</p>
-										<ul class="actions">
-											<li><a href="http://imxgam.in2p3.fr" class="button">Learn More</a></li>
-										</ul>
-									</article>
-								</div>
-
-							</div>
-							</p>
-						</header>
-
-		<!-- CTA -->
-			<section id="cta" class="wrapper style3">
-				<h3>Webpage under construction, <br /> Pdf resume available : </h3>
-				<ul class="actions">
-					<li><a href="SoniaKarkar2018Web.pdf" class="button big">Colorfull</a></li>
-					<li><a href="SoniaKarkarBWResumeWeb.pdf" class="button big">Printer Friendly </a></li>
-				</ul>
-			</section>
-
+		</section>
+		<!-- BottomBanner -->
+		<div data-include="bottomBanner"></div>
 		<!-- Footer -->
-			<footer id="footer">
-				<!-- <ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
-				</ul>
-				<ul class="menu">
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Terms of Use</a></li>
-					<li><a href="#">Privacy</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul> -->
-				<span class="copyright">
-					2018 Sonia Karkar &copy; Copyright. All rights reserved. Design by <a href="http://www.html5webtemplates.co.uk">Responsive Web Templates</a>
-				</span>
-			</footer>
+		<div data-include="footer"></div>
 
 	</body>
 </html>
