@@ -931,12 +931,15 @@
 			margin: 0 auto;
 			overflow: hidden;
 			width: 80%;
+			background-color: black;
 		}
 
 		.slider .slide img {
 			border-radius: 0.375em;
 			display: block;
 			width: 100%;
+			margin-left: auto;
+    		margin-right: auto
 		}
 
 		.slider .nav-next,
