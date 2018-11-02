@@ -941,11 +941,18 @@
 			margin-left: auto;
     		margin-right: auto;
 		}
-
+		.slider .slide video {
+			border-radius: 0.375em;
+			display: block;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.slider .nav-next,
 		.slider .nav-previous {
 			text-decoration: none;
-			background: #fff;
+			/* background: #fff; */
+			background: red;
 			border-radius: 100%;
 			color: #ddd;
 			cursor: pointer;
