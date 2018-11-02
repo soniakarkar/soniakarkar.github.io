@@ -951,8 +951,7 @@
 		.slider .nav-next,
 		.slider .nav-previous {
 			text-decoration: none;
-			/* background: #fff; */
-			background: red;
+			background: #fff;
 			border-radius: 100%;
 			color: #ddd;
 			cursor: pointer;
